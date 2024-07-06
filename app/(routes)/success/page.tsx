@@ -1,7 +1,9 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"
+import Lottie from 'react-lottie-player';
+import animationData from '@/public/succesoayment.json';
+;
 
 const PageSuccess = () => {
     const router = useRouter()
@@ -9,7 +11,12 @@ const PageSuccess = () => {
         <div className="max-w-5xl p-4 mx-auto sm:py-16 sm:px-24">
             <div className="flex flex-col-reverse gap-2 sm:flex-row">
                 <div className="flex justify-center md:min-w-[400px]">
-                    <Image src="" alt="Success" width={250} height={500} className="rounded-lg" />
+                    <Lottie
+                        loop
+                        animationData={animationData}
+                        play
+                        style={{ width: 150, height: 150 }}
+                    />
                 </div>
 
                 <div>
